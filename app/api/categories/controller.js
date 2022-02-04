@@ -28,7 +28,37 @@ module.exports = {
                 data: categories
             })
         } catch (err) {
+            next(err)
+        }
+    },
+
+    updateCategories : async (req, res, next) => {
+        try {
+            const { id } = req.params;
+            const { name } = req.body;
+            const checkCategory = await Category.findOne({
+                where: {
+                    id: id,
+                    user: req.user.id
+                }
+            })
+
+            const categories = await checkCategory.update(
+                { name: name },
+                {
+                    where: {
+                        id: id,
+                        user: req.user.id
+                    }
+                }
+            );
+            res.status(201).json({
+                message: 'Success update categories',
+                data: categories
+            })
             
+        } catch (err) {
+            next(err)
         }
     }
 }
