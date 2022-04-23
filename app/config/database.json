@@ -1,10 +1,14 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "db_toko_buku",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "kugisxdkoqbvxl",
+    "password": "4dc7b6343e8a6e17ec4710ff2c3d88fb290541754a0d115d482bb6b167819419",
+    "database": "d1demp9tmctt9m",
+    "host": "ec2-3-229-252-6.compute-1.amazonaws.com",
+    "port": 5432,
+    "dialect": "postgres",
+    "dialectOptions" : {
+      "ssl" : {"rejectUnauthorized": false}
+    }
   },
   "test": {
     "username": "root",
@@ -14,10 +18,14 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "kugisxdkoqbvxl",
+    "password": "4dc7b6343e8a6e17ec4710ff2c3d88fb290541754a0d115d482bb6b167819419",
+    "database": "d1demp9tmctt9m",
+    "host": "ec2-3-229-252-6.compute-1.amazonaws.com",
+    "port": 5432,
+    "dialect": "postgres",
+    "dialectOptions" : {
+      "ssl" : {"rejectUnauthorized": false}
+    }
   }
 }
